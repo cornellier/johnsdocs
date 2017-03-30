@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head><link rel="stylesheet" type="text/css" href="main.css">
+<title>Character encoding</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div id="header">
+        <h1>character encoding</h1>
+        <p></p>
+        <p></p>
+    </div>
+    
+    <div class="colmask threecol">
+        <div class="colmid">
+            <div class="colleft">
+                <div class="col1">
+                    <!--begin main content section -->
+                    
+<p>UTF-8 defines over a million characters using one, two, three, or four 8-bit words. These are also called bytes, octets, or code points. The more common characters are encoded using only one byte, making UTF-8 a variable length encoding.</p>
+
+<p>One or more of the first, high, or left-most bits are significant digits. They indicate how many bytes are in the character. In a one-byte character the first, or left-most, bit is set to 0 and the remaining seven bits can have values from 0000000 to 1111111, or 0 to 127 in decimal. These 128 values are enough for, and are backwards-compatible with, US-ASCII.</p>
+
+<p>The name UTF-8 is derived from Unicode (itself derived from Universal Coded Character Set) Transformation Format – 8-bit.  Officially it is spelt UTF-8 (caps and hyphen). The name "utf-8" may be used by all IANA standards such as CSS, HTML, XML, and HTTP headers since the declaration is case insensitive. W3C recommends it as the default format for all XML and HTML.</p>
+
+<p>Sometimes the bytes cannot be parsed as UTF-8 and can produce an unhandled exception. However nowadars any unparsable code is replaced with something like "�".</p>
+
+<p>Many Windows programs add a BOM (byte order mark), which is not relevant to byte order and can cause errors. For example in Linux, using the command less on a Windows file may produce the error "may be a binary file. See it anyway?". Less does this because it cannot parse the character set as text. A workaround is to use the --force switch in less.</p>
+<p>The default encoding in Unix is UTF-8. You can see which encoding your shell is using with the command <a href="http://man7.org/linux/man-pages/man1/locale.1.html">locale</a>.</p>
+<p>In Linux, a line break is a single character: the Line Feed (LF), represented as 0A in UTF-8 hex. In Windows text files a line break is two characters: a Carriage Return (CR) followed by a Line Feed (LF). These can be cleaned up with the command <a href="http://man7.org/linux/man-pages/man1/locale.1.html">dos2unix</a>. Dos2unix can also convert encoding such as UTF-16 to UTF-8. <a href="http://www.gnu.org/savannah-checkouts/gnu/libiconv/documentation/libiconv-1.15/iconv.1.html">iconv</a> converts text from one encoding to another encoding.
+</p>
+                    <!-- main content section end -->
+                </div>
+                <div class="col2">
+                    <!-- Column 2 start -->
+                    <p><a href="index.html">John's docs home</a></p>
+                    <!-- Column 2 end -->
+                </div>
+                <div class="col3">
+                    <!-- Column 3 start -->
+                    <!-- Column 3 end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p></p>
+    </div>
+</body>
+</html>
