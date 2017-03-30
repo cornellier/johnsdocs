@@ -12,7 +12,6 @@
 <div id="header">
   <h1>click bait generator</h1>
   
-    <p></p>
 </div>
 
 <div class="colmask threecol">
@@ -21,22 +20,27 @@
       <div class="col1">
         <!--begin main content section -->
 
-
-<script type="text/javascript" language="javascript">
+<form id="clickbait-generator">
+  <input type="text" name="subject" id="subject" placeholder="e.g. John"></input>
+  <button type="submit" id="clickbait-generator-button">go</button>
+  </form>
+        <!--onclick of form, get subject value and substitute it into a randomly chosen string and output the string -->
+        <script type="text/javascript" language="javascript">
 var textArray = [
     'how $$ shed 20 pounds in a day and how you can too',
     '12 ways $$ is destroying canada'
 ];
+//should be gotten from form, hard coding here
+var subject = 'John' 
+//generate a rand
 var randomNumber = Math.floor(Math.random()*textArray.length);
-document.write (randomNumber)
-audioElement.setAttribute('src', textArray[randomNumber]);
-document.write (textArray[randomNumber]);
-document.write (foo);
-
-
-document.write (textArray[0])
-
-
+//use rand to pick a line from the text array
+var template = (textArray[randomNumber]);
+//substitute name
+var generatedClickBait = template.replace('$$', subject);
+// output to doc probably want to wrap in some html for pretty printing
+document.write (generatedClickBait);
+</script>
         <!-- main content section end -->
       </div>
       <div class="col2">
