@@ -1,79 +1,61 @@
-CTYPE html>
+<!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" type="text/css" href="main.css">
-<title>users &amp; groups</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="main.css" rel="stylesheet" type="text/css" />
+	<title>users &amp; groups</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <div id="header">
-        <h1>vi</h1>
-        <p></p>
-        <p></p>
-    </div>
-    
-    <div class="colmask threecol">
-        <div class="colmid">
-            <div class="colleft">
-                <div class="col1">
-                    <!--begin main content section -->
 <body>
+<div id="header">
+<h1>users &amp; groups</h1>
+</div>
 
-<pre>Files and directories have permissions which define who can do what with them. This can be seen with ls, e.g.
+<div class="colmask threecol">
+<div class="colmid">
+<div class="colleft">
+<div class="col1"><!--begin main content section --></div>
+</div>
+</div>
+</div>
+
+<p>Files and directories have permissions which define who can do what with them. This can be seen with ls, e.g.</p>
+
+<pre>
 $ ls -l foo
--rw-r--r-- 1 john develop 4564 Mar 30 14:17
+-rw-r--r-- 1 john develop 4564 Mar 30 14:17</pre>
 
-Which breaks down as follows:
-- indicates a regular file. Could also be d for directory, l for symbolic link, p for named pipe, s for socket, c for a character device, or b for a block device.
-rw-r--r-- are the file permissions, three sets of three characters. More about this below.
-1 is the number of links
-john is the owner name
-develop is the owner group
-owner group
-4564 is the file size
-Mar 30 14:17 is the timestamp of the last modification
+<p>Which breaks down as follows:</p>
 
-The above can vary slightly for different files and can depend on the <a href=shell.html>shell</a> configuration.
+<ul>
+	<li>- indicates a regular file. Could also be d for directory, l for symbolic link, p for named pipe, s for socket, c for a character device, or b for a block device.</li>
+	<li>rw-r--r-- are the file permissions, three sets of three characters. More about this below.</li>
+	<li>1 is the number of links</li>
+	<li>john is the owner name</li>
+	<li>develop is the owner group</li>
+	<li>4564 is the file size</li>
+	<li>Mar 30 14:17 is the timestamp of the last modification</li>
+</ul>
 
-For the permissions, there are three groups of three, the first for the owner, the second for the owner group, and the third for other. 
+<p>The above can vary slightly for different files and can depend on the <a href="shell.html">shell</a> configuration.</p>
 
-The first of the three positions can be - or r, whether or readable or not, - or w, whether writable or not, and - or x, for executable. This is a symbolic representation of a binary number. - is zero, and a letter is 1. So --- is zero, --1 is one, -1- is two, etc. So each set of three values can be expressed as octal numbers.
+<p>For the permissions, there are three groups of three, the first for the owner, the second for the owner group, and the third for other.</p>
 
-rw-r--r-- is 110 100 100, or in octal 6 4 4. Permissions are changed with the chmod command. For example: 
-$ chmod 777 foo
-$ ls -l foo
--rwxrwxrwx [etc]
-$ chmod 644 foo
--rw-r--r-- [etc]
+<p>The first of the three positions can be - or r, whether or readable or not, - or w, whether writable or not, and - or x, for executable. This is a symbolic representation of a binary number. - is zero, and a letter is 1. So --- is zero, --1 is one, -1- is two, etc. Each set of three values can be expressed as octal numbers. rw-r--r-- is 110 100 100, or in octal 6 4 4.</p>
 
-Another syntax for chmod is 
-chmod [ugoa][+-=][rwxXst] file-or-dir
+<p>Permissions are changed with the chmod command. For example: $ chmod 777 foo $ ls -l foo -rwxrwxrwx [etc] $ chmod 644 foo -rw-r--r-- [etc] Another syntax for chmod is chmod [ugoa][+-=][rwxXst] file-or-dir So chmod 777 is equivalent to chmod a+rwx foo</p>
 
-So chmod 777 is equivalent to 
-chmod a+rwx foo
+<p>Every user has a default setting for the permissions of anything they create. Usually this creates files with rw-r--r-- and directories with rwxr-xr-x. The umask can be set to something different with the umask command. The umask is subtractive. In Linux, the default permissions value is 666 for a regular file, and 777 for a directory. When creating a new file or directory, the kernel takes this value and subtracts the umask value, and gives the new files the resulting permissions. So if the umask is 022, then 666-022=044. The typical user default umask for files is 022.</p>
 
-Every user has a default setting for the permissions of anything they create. Usually this creates files with rw-r--r-- and directories with rwxr-xr-x. The umask can be set to something different with the umask command. The umask is subtractive. In Linux, the default permissions value is 666 for a regular file, and 777 for a directory. When creating a new file or directory, the kernel takes this value and subtracts the umask value, and gives the new files the resulting permissions. So if the umask is 022, the 666-022=044. So the typical user default umask for files is 022.
+<p>Groups can be seen in the /etc/group file and with the groups command. Every user has a primary group. When a program is run or file is created they are associated with that group. To run programs or create a file in a different group, run the newgrp command, which makes another group the effective group. The chgrp command changes the group of a file.<!-- main content section end --></p>
 
-Groups can be seen in the /etc/group file. Every user has a primary group. When a program is run or file is created they are associated with that group. Groups can be seen with the groups command. To run programs or create a file in a different group, run the newgrp command. This makes another group the effective group. If the user entering the above-referenced command is a member of the marketing group in the /etc/group file, then the current group membership will change. It is important to note that any files created will now be associated with the marketing group rather than the user’s primary group. Users may also change their group by using the chgrp command.
+<div class="col2"><!-- Column 2 start -->
+<p><a href="index.html">John&#39;s docs home</a></p>
+<!-- Column 2 end --></div>
 
-</pre>
-    <!-- main content section end -->
-    </div>
-    <div class="col2">
-        <!-- Column 2 start -->
-        <p><a href="index.html">John's docs home</a></p>
-        <!-- Column 2 end -->
-    </div>
-    <div class="col3">
-        <!-- Column 3 start -->
-        <!-- Column 3 end -->
-    </div>
-    </div>
-    </div>
-    </div>
-    <div id="footer">
-        <p></p>
-    </div>
+<div class="col3"><!-- Column 3 start --><!-- Column 3 end --></div>
+
+<div id="footer">
+<p></p>
+</div>
 </body>
 </html>
-
