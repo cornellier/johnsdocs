@@ -2,22 +2,18 @@
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="main.css" rel="stylesheet" type="text/css" />
-	<title>users &amp; groups</title>
+	<title>canoe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div id="header">
-<h1>users &amp; groups</h1>
+<h1>uers & groups</h1>
 </div>
 
 <div class="colmask threecol">
 <div class="colmid">
 <div class="colleft">
-<div class="col1"><!--begin main content section --></div>
-</div>
-</div>
-</div>
-
+<div class="col1"><!--begin main content section -->
 <p>Files and directories have permissions which define who can do what with them. This can be seen with ls, e.g.</p>
 
 <pre>
@@ -46,16 +42,19 @@ $ ls -l foo
 
 <p>Every user has a default setting for the permissions of anything they create. Usually this creates files with rw-r--r-- and directories with rwxr-xr-x. The umask can be set to something different with the umask command. The umask is subtractive. In Linux, the default permissions value is 666 for a regular file, and 777 for a directory. When creating a new file or directory, the kernel takes this value and subtracts the umask value, and gives the new files the resulting permissions. So if the umask is 022, then 666-022=044. The typical user default umask for files is 022.</p>
 
-<p>Groups can be seen in the /etc/group file and with the groups command. Every user has a primary group. When a program is run or file is created they are associated with that group. To run programs or create a file in a different group, run the newgrp command, which makes another group the effective group. The chgrp command changes the group of a file.<!-- main content section end --></p>
+<p>Groups can be seen in the /etc/group file and with the groups command. Every user has a primary group. When a program is run or file is created they are associated with that group. To run programs or create a file in a different group, run the newgrp command, which makes another group the effective group. The chgrp command changes the group of a file.</p>
+<!-- main content section end --></div>
 
 <div class="col2"><!-- Column 2 start -->
-<p><a href="index.html">John&#39;s docs home</a></p>
+<p><a href="index.html">John's docs home</a></p>
 <!-- Column 2 end --></div>
 
 <div class="col3"><!-- Column 3 start --><!-- Column 3 end --></div>
+</div>
+</div>
+</div>
 
 <div id="footer">
-<p></p>
 </div>
 </body>
 </html>
