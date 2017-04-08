@@ -21,13 +21,26 @@
           <div class="col1">
             <!--begin main content section -->
             
-            <p>Getting started (on macOS):</p>
-            <pre>
-git clone https://github.com/cornellier/johnsdocs.git
-echo .DS_Store >> .gitignore
-git add .gitignore
+            <h2>vocabulary</h2>
+            <ul>
+              <li></li>
+            </ul>
+            <h2>connect to an existing repo</h2>
+            <pre>git clone https://github.com/cornellier/johnsdocs.git</pre>
+            <h2>create and add a file</h2>
+            <pre>echo .DS_Store >> .gitignore
+git add .gitignore</pre>
+<h2>commit (aka stage)</h2>
+<pre>
 git commit .gitignore -m "add .DS_Store"
 </pre>
+<h2>diff with origin</h2>
+<pre>
+git fetch origin
+git diff origin -- [local-path]
+</pre>
+<h2>push to the remote repo</h2>
+<pre>git push</pre>
             <pre>
 init
 touch README
