@@ -20,7 +20,25 @@
         <div class="colleft">
           <div class="col1">
             <!--begin main content section -->
-            
+            <h2>config</h2>
+            <pre>
+git config --global user.name "John Cornellier"
+git config --global user.email john@johnsdocs.com
+            </pre>
+            <h2>clone a project</h2>
+            <pre>
+git clone https://github.com/cornellier/johnsdocs.git
+cd johnsdocs
+git init
+            </pre>
+            <p>The directory project is now initialized as the working directory, with a new subdirectory created, ".git". Take a snapshot of the all the files:</p>
+            <pre>
+              git add .
+            </pre>
+<p>The snapshot is stored in a staging area called the index. Permanently store the contents of the index:</p>
+<pre>
+git commit -m "message about this commit"
+</pre>
             <h2>vocabulary</h2>
             <ul>
               <li></li>
