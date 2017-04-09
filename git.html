@@ -24,29 +24,16 @@
             <pre>
 git config --global user.name "John Cornellier"
 git config --global user.email john@johnsdocs.com
+git config --global alias.a add
+git config --global alias.co commit
+git config --global alias.st status
             </pre>
             <h2>clone a project</h2>
             <pre>
 git clone https://github.com/cornellier/johnsdocs.git
-cd johnsdocs
-git init
-            </pre>
-            <p>The directory project is now initialized as the working directory, with a new subdirectory created, ".git". Take a snapshot of the all the files:</p>
-            <pre>
-              git add .
-            </pre>
-<p>The snapshot is stored in a staging area called the index. Permanently store the contents of the index:</p>
-<pre>
-git commit -m "message about this commit"
-</pre>
-            <h2>vocabulary</h2>
-            <ul>
-              <li></li>
-            </ul>
-            <h2>connect to an existing repo</h2>
-            <pre>git clone https://github.com/cornellier/johnsdocs.git</pre>
+cd johnsdocs</pre>
             <h2>create and add a file</h2>
-            <pre>echo .DS_Store >> .gitignore
+<pre>echo .DS_Store >> .gitignore
 git add .gitignore</pre>
 <h2>commit (aka stage)</h2>
 <pre>
@@ -57,27 +44,17 @@ git commit .gitignore -m "add .DS_Store"
 git fetch origin
 git diff origin -- [local-path]
 </pre>
-<h2>push to the remote repo</h2>
-<pre>git push</pre>
-            <pre>
-init
-touch README
-add README
-commit -a -v -m 'message'
-push
-pull
-fetch (what is the difference between pull and fetch?)
-</pre>
-            <p>To undo git add before commit git reset [file]. This removes it from without changing anything else.</p>
-            <p>To ammend the most recent commit message do git commit --amend</p>
-            <p>to undo a commit and redo:</p>
+<h2>undo add before commit</h2>
+<pre>git reset foo.txt</pre>
+<h2>ammend the most recent commit message</h2>
+<pre>git commit --amend</pre>
+<h2>undo the last commit</h2>
             <pre>
 git commit -m "oops"
 git reset HEAD~
-[ edit files ]
-git add ...
-git commit -c ORIG_HEAD
 </pre>
+<h2>push to remote repo</h2>
+<pre>git push</pre>
             <!-- main content section end -->
           </div>
           <div class="col2">
