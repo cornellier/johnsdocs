@@ -34,9 +34,15 @@ td {
   color:#F8F8F2;
 }
 code {
-  font-size: 120%
+  font-size: 120%;
 }
-p,pre, ul, li {
+pre {
+  margin:.4em 0 .8em 0;
+  padding:0;
+  color:#F8F8F2;
+  font-size: 130%;
+}
+p, pre {
   margin:.4em 0 .8em 0;
   padding:0;
   color:#F8F8F2;
