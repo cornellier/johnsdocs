@@ -33,6 +33,9 @@ th {
 td {
   color:#F8F8F2;
 }
+code {
+  font-size: 120%
+}
 p,pre, ul, li {
   margin:.4em 0 .8em 0;
   padding:0;
