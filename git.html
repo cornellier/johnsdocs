@@ -53,6 +53,18 @@ git diff origin -- [local-path]
 git commit -m "oops"
 git reset HEAD~
 </pre>
+<h2>compare local with remote</h2>
+<pre>git fetch
+git log -p HEAD..FETCH_HEAD</pre>
+<h2>remove local uncommited changes</h2>
+<p>Types of local uncommited files:</p>
+<ul><li>tracked staged: have been added. aka moved to staging aka added to index</li>
+<li>unstaged tracked: modified but not added</li>
+<li>untracked: new files, by definition unstaged.</li></ul>
+<p>remove unstaged tracked: <code>git checkout foo.txt</code></p>
+<p>remove unstaged untracked (no undo): <code>git clean -f</code>. To remove directories add <code>-d</code></p>
+<p>remove unstaged and staged tracked: <code>git reset --hard</code></p>
+
 <h2>push to remote repo</h2>
 <pre>git push</pre>
             <!-- main content section end -->
