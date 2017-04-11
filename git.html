@@ -11,8 +11,6 @@
   <body>
     <div id="header">
       <h1>git</h1>
-      <p>Some commands I use in git</p>
-      <p></p>
     </div>
     
     <div class="colmask threecol">
@@ -35,7 +33,7 @@ cd johnsdocs</pre>
             <h2>create and add a file</h2>
 <pre>echo .DS_Store >> .gitignore
 git add .gitignore</pre>
-<h2>commit (aka stage)</h2>
+<h2>commit</h2>
 <pre>
 git commit .gitignore -m "add .DS_Store"
 </pre>
@@ -46,7 +44,7 @@ git diff origin -- [local-path]
 </pre>
 <h2>undo add before commit</h2>
 <pre>git reset foo.txt</pre>
-<h2>ammend the most recent commit message</h2>
+<h2>ammend the last commit message</h2>
 <pre>git commit --amend</pre>
 <h2>undo the last commit</h2>
             <pre>
@@ -57,13 +55,9 @@ git reset HEAD~
 <pre>git fetch
 git log -p HEAD..FETCH_HEAD</pre>
 <h2>remove local uncommited changes</h2>
-<p>Types of local uncommited files:</p>
-<ul><li>tracked staged: have been added. aka moved to staging aka added to index</li>
-<li>unstaged tracked: modified but not added</li>
-<li>untracked: new files, by definition unstaged.</li></ul>
-<p>remove unstaged tracked: <code>git checkout foo.txt</code></p>
-<p>remove unstaged untracked (no undo): <code>git clean -f</code>. To remove directories add <code>-d</code></p>
-<p>remove unstaged and staged tracked: <code>git reset --hard</code></p>
+<p>tracked unstaged: modified but not added: <code>git checkout foo.txt</code></p>
+<p>tracked staged: have been added, aka moved to staging aka added to index: <code>git reset --hard</code></p>
+<p>untracked: new files, by definition unstaged, remove (no undo): <code>git clean -f</code>. To remove directories add <code>-d</code>.</p>
 
 <h2>push to remote repo</h2>
 <pre>git push</pre>
