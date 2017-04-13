@@ -10,7 +10,7 @@ body {
   font-family:sans-serif
 }
 a {
-  color:#A6E22E;
+  color:#FFE792;
   text-decoration:none;
 }
 a:hover {
@@ -19,7 +19,7 @@ a:hover {
 h1, h2, h3 {
   margin:.8em 0 .2em 0;
   padding:0;
-  color:#FFE792;
+  color:#A6E22E;
 }
 ul, li {
   color:#F8F8F2;
@@ -51,24 +51,6 @@ img {
   margin:10px 0 5px;
 }
 
-/* Header styles */
-#header {
-  clear:both;
-  float:left;
-  width:100%;
-  border-bottom:0px solid #000;
-}
-#header a {
-    text-align:left;
-    padding-left:20px;
-}
-#header p,
-#header h1,
-#header h2 {
-  padding:.4em 15px 0 15px;
-  margin:0;
-  text-align:center;
-}
 /* column container */
 .colmask {
   position:relative;  /* This fixes the IE7 overflow hidden bug */
