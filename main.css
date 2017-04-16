@@ -17,7 +17,12 @@ a {
 a:hover {
   text-decoration:underline;
 }
-h1, h2, h3 {
+h1 {
+  margin:.8em 0 .2em 0;
+  padding:0;
+  color:#F92672;
+}
+h2, h3 {
   margin:.8em 0 .2em 0;
   padding:0;
   color:#FFE792;
@@ -25,6 +30,13 @@ h1, h2, h3 {
 ul, li {
   color:#F8F8F2;
 }
+dt {
+  color:#AE81FF; 
+}
+dd {
+  color:#F8F8F2;
+}
+
 caption {
   color:#AE81FF;
 }
