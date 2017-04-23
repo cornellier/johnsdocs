@@ -75,6 +75,11 @@ git reset HEAD~
 <p>tracked unstaged: modified but not added: <code>git checkout foo.txt</code></p>
 <p>tracked staged: have been added, aka moved to staging aka added to index: <code>git reset --hard</code></p>
 <p>untracked: new files, by definition unstaged, remove (no undo): <code>git clean -f</code>. To remove directories add <code>-d</code>.</p>
+<h3>discard all local changes and copy from repo</h3>
+<pre>
+git reset --hard HEAD
+git clean -f
+git pull</pre>
             <!-- main content section end -->
           </div>
           <div class="col2">
