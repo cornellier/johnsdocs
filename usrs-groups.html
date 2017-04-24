@@ -43,6 +43,8 @@ $ ls -l foo
 <p>Every user has a default setting for the permissions of anything they create. Usually this creates files with rw-r--r-- and directories with rwxr-xr-x. The umask can be set to something different with the umask command. The umask is subtractive. In Linux, the default permissions value is 666 for a regular file, and 777 for a directory. When creating a new file or directory, the kernel takes this value and subtracts the umask value, and gives the new files the resulting permissions. So if the umask is 022, then 666-022=044. The typical user default umask for files is 022.</p>
 
 <p>Groups can be seen in the /etc/group file and with the groups command. Every user has a primary group. When a program is run or file is created they are associated with that group. To run programs or create a file in a different group, run the newgrp command, which makes another group the effective group. The chgrp command changes the group of a file.</p>
+<h2>various commands</h2>
+<dl><dt>id</dt><dd>print user and group id</dd></dl>
 <!-- main content section end --></div>
 
 <div class="col2"><!-- Column 2 start -->

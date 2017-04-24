@@ -98,7 +98,7 @@ grep search a file</p>
 	<li>rev: enters interactive mode and reverses any input string</li>
 </ul>
 <h2>corrupted terminal, what now?</h2>
-<p>Once I typed in a badly-formatted path line in <code>./bash_profile</code> and after that I could not use any standard commands like vi or ls to fix it. Those commands all returned <code>command not found</code>. I couldn't even switch to another terminal:
+<p>Once I typed in a badly-formatted path line in <code>./bash_profile</code> and after that I could not use any standard commands like vi or ls to fix it. I couldn't even switch to another terminal:
 <pre>
 $ vi ~/.bash_profile
 $ command not found
@@ -109,12 +109,12 @@ $ command not found
 $ PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
 $ command not found
 </pre>
-<p>Nor could I edit <code>~/.bash_profile</code> in a text editor because Mac's GUI won't display "hidden" files. There's a way to make Finder show hidden files. Issue a command then restart finder:</p>
+<p>Nor could I edit <code>~/.bash_profile</code> in a graphical text editor because Mac's GUI won't display "hidden" files. There's a way to make Finder show hidden files. Issue a command then restart finder:</p>
 <pre>
 $ defaults write com.apple.Finder AppleShowAllFiles true
 $ command not found
 </pre>
-<p>The solution was to change the default Terminal shell: Terminal > Preferences > Execute this command > /bin/csh. Restart Terminal, then fix the mess from tsch.</p>
+<p>The solution was to change the default Terminal shell: Terminal > Preferences > Execute this command > /bin/tcsh. Restart Terminal, then fix the mess from tsch.</p>
 	<!-- main content section end -->
 	</div>
 	<div class="col2">
