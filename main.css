@@ -2,7 +2,7 @@
 body {
   margin:0;
   padding:0;
-  border:0;     /* This removes the border around the viewport in old versions of IE */
+  /*border:0;      This removes the border around the viewport in old versions of IE */
   width:100%;
   background:#272822;
   min-width:600px;    /* Minimum width of layout - remove line if not required */
@@ -105,18 +105,18 @@ img {
   position:relative;
   padding:0 0 1em 0;  /* no left and right padding on columns, we just make them narrower instead 
           only padding top and bottom is included here, make it whatever value you need */
-  overflow:hidden;
+  /*overflow:hidden; */
 }
 /* 3 Column settings */
 .threecol {
   background:#272822;    /* right column background colour */
 }
 .threecol .colmid {
-  right:25%;      /* width of the right column */
+  right:5%;      /* width of the right column */
   background:#272822;    /* center column background colour */
 }
 .threecol .colleft {
-  right:50%;      /* width of the middle column */
+  right:70%;      /* width of the middle column */
   background:#272822;  /* left column background colour */
 }
 .threecol .col1 {
@@ -128,7 +128,7 @@ img {
   left:31%;     /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
 .threecol .col3 {
-  width:21%;      /* Width of right column content (column width minus padding on either side) */
+  width:6%;      /* Width of right column content (column width minus padding on either side) */
   left:85%;     /* Please make note of the brackets here:
           (100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
 }
