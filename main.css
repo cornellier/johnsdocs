@@ -21,6 +21,7 @@ h1 {
   margin:.8em 0 .2em 0;
   padding:0;
   color:#F92672;
+  text-align:left;
 }
 h2, h3 {
   margin:.8em 0 .2em 0;
@@ -71,17 +72,19 @@ img {
   width:100%;
   border-bottom:0px solid #000;
 }
+
+header h1,
+{
+  padding:.4em 15px 0 15px;
+  margin:0;
+  text-align:left;
+}
+
 #header a {
     text-align:left;
     padding-left:20px;
 }
-#header p,
-#header h1,
-#header h2 {
-  padding:.4em 15px 0 15px;
-  margin:0;
-  text-align:center;
-}
+
 /* column container */
 .colmask {
   position:relative;  /* This fixes the IE7 overflow hidden bug */
@@ -116,7 +119,7 @@ img {
   background:#272822;    /* center column background colour */
 }
 .threecol .colleft {
-  right:70%;      /* width of the middle column */
+  right:80%;      /* width of the middle column */
   background:#272822;  /* left column background colour */
 }
 .threecol .col1 {
@@ -124,7 +127,7 @@ img {
   left:102%;      /* 100% plus left padding of center column */
 }
 .threecol .col2 {
-  width:21%;      /* Width of left column content (column width minus padding on either side) */
+  width:11%;      /* Width of left column content (column width minus padding on either side) */
   left:31%;     /* width of (right column) plus (center column left and right padding) plus (left column left padding) */
 }
 .threecol .col3 {
