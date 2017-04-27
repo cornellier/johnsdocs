@@ -5,31 +5,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id="header">
-		<h1><a href="index.html">~</a>/shell</h1>
-		<p></p>
-		<p></p>
-	</div>
+<header><a href="index.html">~</a>/shell</header>
 	
-	<div class="colmask threecol">
-		<div class="colmid">
-			<div class="colleft">
-				<div class="col1">
-					<!--begin main content section -->
-
-
-<p>For most Linux, Unix, and Mac shells.</p>
+<article>
+<p>For Unix-like shells.</p>
 
 <h2>symbolic links</h2>
 
 <p><code>ln -s target symboliclink</code>. The target has to exist already.</p>
 
 <h2>shortcuts</h2>
-
 <p>Edit on command line, all with ctrl key</p>
+<table><thead><th>meta</th><th>key</th><th>to do</th></thead>
+<tr><td>go to beginning of line</td><td>ctrl</td><td>a</td></tr>
+</table>
 
-<ul>
-	<li>a / e: move to beginning / end of line</li>
+
+<dl><dt>ctrl+a</dt><dd>go to end</dd></dl>
+
+<p><code>ctrl+a</code>: go to beginning of line</p>
+<p>go to beginning of line: <code>ctrl+a</code></p>
+<p>go to end of line: <code>ctrl+e</code></p>
+
+<ul style="list-style-type:none">
+<li>go to start of line: <code>ctrl+a</code></li>
+	<li>go to end of line: <code>ctrl+e</code></li>
 	<li>b / f: move back / forward one character</li>
 	<li>k / u: delete all right / left of cursor</li>
 	<li>w: delete word left of cursor (same as alt+backspace)</li>
@@ -111,22 +111,7 @@ $ defaults write com.apple.Finder AppleShowAllFiles true
 $ command not found
 </pre>
 <p>The solution was to change the default Terminal shell: Terminal > Preferences > Execute this command > /bin/tcsh. Restart Terminal, then fix the mess from tsch.</p>
-	<!-- main content section end -->
-	</div>
-	<div class="col2">
-		<!-- Column 2 start -->
-		
-		<!-- Column 2 end -->
-	</div>
-	<div class="col3">
-		<!-- Column 3 start -->
-		<!-- Column 3 end -->
-	</div>
-	</div>
-	</div>
-	</div>
-	<div id="footer">
-		<p></p>
-	</div>
+
+	</article>
 </body>
 </html>

@@ -4,55 +4,87 @@
 	<link href="main.css" rel="stylesheet" type="text/css" />
 	<title>canoe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.main {
+    text-align: left;
+    background: cornflowerblue;
+}
+
+.header {background: coral;}
+.footer {background: lightgreen;}
+.aside1 {background: moccasin;}
+.aside2 {background: violet;}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside1 { order: 1; } 
+    .main    { order: 2; }
+    .aside2 { order: 3; }
+    .footer  { order: 4; }
+}
+</style>
+
 </head>
 <body>
-<div id="header">
-<h1><a href="index.html">~</a>/canoe</h1>
-
-<p></p>
-
-<p></p>
-</div>
-
-<div class="colmask threecol">
-<div class="colmid">
-<div class="colleft">
-<div class="col1"><!--begin main content section -->
-<h2>History &amp; nomenclature</h2>
+<article>
+<div class="flex-container">
+  <header class="header"><a href="index.html">~</a>/canoe</header>
+  <article class="main">
+<h1>History &amp; nomenclature</h1>
 <img style="margin:0px 20px" width="320" align="right" alt="La chasse-galerie" src="img/lachassegalerie320.jpg"/>
-<p>A canoe is a light narrow boat, pointed at both ends and with no deck, propelled by one or more paddlers facing the direction of travel using a single-bladed paddle. In the <a href="http://www.canoeicf.com/">International Canoe Federation</a> and in parts of Europe canoe means kayak, while canoes are called Canadian canoes.</p>
+<p>A canoe is a light narrow boat, pointed at both ends and with no deck, propelled by one or more paddlers facing the direction of travel using a single-bladed paddle. In the <a href="http</dt><dd>//www.canoeicf.com/">International Canoe Federation</a> and in parts of Europe canoe means kayak, while canoes are called Canadian canoes.</p>
 
-<p>The word is native American. Their canoes were light enough to be portaged, yet could carry a lot of cargo, even in shallow water. Canoes played a key role in the exploration of North America, and were crucial to the expeditions of Samuel de Champlain, Alexander Mackenzie, and the Lewis and Clark Expedition.</p>
+<p>The word is native to the Americas. Native canoes were light enough to be portaged, yet could carry a lot of cargo, even in shallow water. Canoes played a key role in the exploration of North America, and were crucial to the expeditions of Samuel de Champlain, Alexander Mackenzie, and the Lewis and Clark Expedition.</p>
 
-<h2>Hull design</h2>
+<h1>Hull design</h1>
 
 <p>Hull design must meet conflicting requirements for speed, capacity, maneuverability, and stability.</p>
 
-<p>Length: often stated as the overall length of the boat, but what counts in performance is the length of the waterline, and specifically that length relative to the displacement of the canoe. Displacement is equal to the total weight of the boat and its contents, since a floating body displaces its own weight in water. When a canoe is paddled, it takes an effort to push all of the displaced water out of the way. Canoes are displacement hulls: the longer the waterline relative to its displacement, the faster it can be paddled.</p>
-	<p>Width: a wider boat provides more stability at the expense of speed.</li>
-	<li>Depth: a higher-sided boat stays drier in rough water. The cost of high sides is extra weight, and extra wind resistance.</li>
-	<li>Stability and bottom shape: the hull can be optimized for initial stability (the boat feels steady when it sits flat on the water) or secondary stability (resistance to capsizing). A flat-bottomed hull has high initial stability, while a rounded or V-shaped hull has high secondary stability.</li>
-	<li>Profile, the shape of the canoe's sides. Sides which flare out above the waterline deflect water but require the paddler to reach out over the side of the canoe. If the gunwale width is less than the waterline width or the maximum width the canoe is said to have tumblehome. This makes paddling easier.</li>
-	<li>Rocker: viewed from the side of the canoe, rocker is the amount of curve in the hull, much like the curve of a banana. A canoe with no rocker is for covering long distances in a straight line. The full length of the hull is in the water, so it tracks well and has good speed. As the rocker increases, so does the ease of turning, at the cost of tracking.</li>
-	<li>Hull symmetry: viewed from above, a symmetrical hull has its widest point at the center of the hull and both ends are identical. An asymmetrical hull typically has the widest section aft of center line, creating a longer bow and improving speed.</li>
-</ul>
+<dl><dt>Length</dt><dd> often stated as the overall length of the boat, but what counts in performance is the length of the waterline, and specifically that length relative to the displacement of the canoe. Displacement is equal to the total weight of the boat and its contents, since a floating body displaces its own weight in water. When a canoe is paddled, it takes an effort to push all of the displaced water out of the way. Canoes are displacement hulls</dt><dd> the longer the waterline relative to its displacement, the faster it can be paddled.
+<dt>Width</dt><dd>a wider boat provides more stability at the expense of speed</dd>
 
-<h2>Materials and construction</h2>
+	<dt>Depth</dt><dd>a higher-sided boat stays drier in rough water. The cost of high sides is extra weight, and extra wind resistance.</dd>
+	<dt>Stability and bottom shape</dt><dd> the hull can be optimized for initial stability (the boat feels steady when it sits flat on the water) or secondary stability (resistance to capsizing). A flat-bottomed hull has high initial stability, while a rounded or V-shaped hull has high secondary stability.</dd>
+	<dt>Profile</dt><dd>the shape of the canoe's sides. Sides which flare out above the waterline deflect water but require the paddler to reach out over the side of the canoe. If the gunwale width is less than the waterline width or the maximum width the canoe is said to have tumblehome. This makes paddling easier.</dd>
+	<dt>Rocker</dt><dd> viewed from the side of the canoe, rocker is the amount of curve in the hull, much like the curve of a banana. A canoe with no rocker is for covering long distances in a straight line. The full length of the hull is in the water, so it tracks well and has good speed. As the rocker increases, so does the ease of turning, at the cost of tracking.</dd>
+	<dt>Hull symmetry</dt><dd> viewed from above, a symmetrical hull has its widest point at the center of the hull and both ends are identical. An asymmetrical hull typically has the widest section aft of center line, creating a longer bow and improving speed.</dd>
+</dl>
 
-<ul>
-	<li>Fiberglass is the most common material. It's cheap, can be molded to any shape, and is easy to repair. Boats are built by draping the cloth on a mold, then impregnating it with a liquid epoxy. A gel coat can be added to the hull for appearance. Kevlar is lighter, stronger, and more expensive, and can be substituted for fiberglass.</li>
-	<li>Stitch & glue: the hull is formed of plywood panels are held together with copper wire stitches, then epoxied in place. This eliminates the need for frames or ribs. Once glued together the stitches are removed, and the hull is coated with fiberglass and epoxy, then varnished or painted.</li>
-	<li>Cedar strip: narrow, flexible strips of cedar are glued edge-to-edge over a building jig that defines the shape of the hull. Next the hull is finished as with stitch & glue, and the jig removed.</li>
-	<li>Historical materials include Royalex, a tough plastic ABS composite, aluminum, and bark. The indigenous peoples of eastern Canada and the northeast United States made canoes using the birch bark of the paper birch. The ribs of the canoe, called verons in Canadian French, were made of white cedar, and the hull, ribs, and thwarts were bound using the roots of conifers, and caulked with pitch. In the 1800s a this evolved into canvas on wood, with canvas instead of bark.</li>
-	</ul>
-	</li>
-</ul>
+<h1>Materials and construction</h1>
 
-<h2>Symbolism</h2>
+<dl>
+	<dt>Fiberglass</dt><dd> is the most common material. It's cheap, can be molded to any shape, and is easy to repair. Boats are built by draping the cloth on a mold, then impregnating it with a liquid epoxy. A gel coat can be added to the hull for appearance. Kevlar is lighter, stronger, and more expensive, and can be substituted for fiberglass, as can carbon fiber.</dd>
+	<dt>Stitch & glue</dt><dd> the hull is formed of plywood panels are held together with copper wire stitches, then epoxied in place. This eliminates the need for frames or ribs. Once glued together the stitches are removed, and the hull is coated with fiberglass and epoxy, then varnished or painted.</dd>
+	<dt>Cedar strip</dt><dd> narrow, flexible strips of cedar are glued edge-to-edge over a building jig that defines the shape of the hull. Next the hull is finished as with stitch & glue, and the jig removed.</dd>
+	<dt>Historical</dt><dd>materials include Royalex, a tough plastic ABS composite, aluminum, and bark. The indigenous peoples of eastern Canada and the northeast United States made canoes using the birch bark of the paper birch. The ribs of the canoe, called verons in Canadian French, were made of white cedar, and the hull, ribs, and thwarts were bound using the roots of conifers, and caulked with pitch. In the 1800s a this evolved into canvas on wood, with canvas instead of bark.</dd>
+
+	</dd>
+</dl>
+
+<h1>Symbolism</h1>
 <p>In Canada, the canoe has been a theme in history and folklore, and is a symbol of Canadian identity. From 1935 to 1986 the Canadian silver dollar depicted a voyageur and an aboriginal paddling a canoe with the Northern Lights in the background.</p>
 <p>The Chasse-galerie is a French-Canadian tale of voyageurs who, after a night of celebrating New Year's Eve at a remote timber camp want to visit their sweethearts some 100 leagues away. To be back in time for work the next morning they make a pact with the devil. Their canoe will fly through the air, on condition that they not mention God's name or touch the cross of any church steeple as they fly.</p>
 
-<h2>Competition</h2>
+<h1>Competition</h1>
 <img style="margin:0px 20px" width="320" align="right" alt="John paddling a C1 delta" src="img/john-c1-delta.jpg"/>
 <p>With industrialization canoes became recreational and sporting boats. The Canadian Canoe Association was founded in 1900. Sprint canoe was a demonstration sport at the 1924 Olympics and became an Olympic discipline in 1936. The ICF was formed in 1946 and is the umbrella organization of national canoe organizations.</p>
 
@@ -62,20 +94,15 @@
 
 <p>The <a href="http://www.canotaglace.org/">Association des coureurs en canot à glace</a> organises ice canoeing races. Crews alternately push their canoe across the ice on the frozen parts of the river, and row in the clear areas. While the boats resemble large canoes, they are rowed rather than paddled.</p>
 
-<p><span style="font-size:8px;">Based on content I contributed</span><span style="font-size:8px;"> to <a href="https://en.wikipedia.org/wiki/Canoe">Wikipedia's canoe article</a> a reproduced according to <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</span></p>
-<!-- main content section end --></div>
 
-<div class="col2"><!-- Column 2 start -->
 
-<!-- Column 2 end --></div>
-
-<div class="col3"><!-- Column 3 start --><!-- Column 3 end --></div>
-</div>
-</div>
+   </article>
+  <aside class="aside aside1">Aside 1</aside>
+  <aside class="aside aside2">Aside 2</aside>
+  <footer class="footer">Based on content I contributed to <a href="https://en.wikipedia.org/wiki/Canoe">Wikipedia's canoe article</a> and reproduced according to <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</footer>
 </div>
 
-<div id="footer">
-<p></p>
-</div>
+
+
 </body>
 </html>
