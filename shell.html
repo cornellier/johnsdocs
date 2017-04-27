@@ -5,16 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header><a href="index.html">~</a>/shell</header>
+<article>
+<div class="flex-container">
+  <header class="header"><a href="index.html">~</a>/shell</header>
+  <article class="main">
 	
 <article>
 <p>For Unix-like shells.</p>
 
-<h2>symbolic links</h2>
+<h1>symbolic links</h1>
 
 <p><code>ln -s target symboliclink</code>. The target has to exist already.</p>
 
-<h2>shortcuts</h2>
+<h1>shortcuts</h1>
 <p>Edit on command line, all with ctrl key</p>
 <table><thead><th>meta</th><th>key</th><th>to do</th></thead>
 <tr><td>go to beginning of line</td><td>ctrl</td><td>a</td></tr>
@@ -37,7 +40,7 @@
 	<li>l: clear screen</li>
 </ul>
 
-<h2>history</h2>
+<h1>history</h1>
 
 <ul>
 	<li>!!: repeat last command</li>
@@ -46,14 +49,14 @@
 	<li>a space before a command omits it from history</li>
 </ul>
 
-<h2>directories</h2>
+<h1>directories</h1>
 
 <p>pwd: print working director, i.e. the directory where you are</p>
 <p>cd or cd ~: change to home directory. ~ (called tilde) is a shortcut for your home directory. cd ~/Library cds to /Users/[current user]/Library.</p>
 <p>cd - : cd to previous directory</p>
 <p>tree: display an &quot;ASCII art&quot; tree representation of the directory structure. Not installed by default on all operating systems. Can be installed with&nbsp;yum install tree, sudo apt-get install tree,&nbsp;brew install tree, etc.</p>
 
-<h2>reading directories and files</h2>
+<h1>reading directories and files</h1>
 
 <p>ls: lists &nbsp;files. Useful&nbsp;switches include -l (more info) -a (hidden files) -rt (sort ascending by time).<br />
 stat: display info about file on disk<br/>
@@ -66,7 +69,7 @@ diff: compare two files<br />
 wc: display number of lines, words and characters in a file<br />
 grep search a file</p>
 
-<h2>environment</h2>
+<h1>environment</h1>
 
 <ul>
 	<li>
@@ -80,7 +83,7 @@ grep search a file</p>
 	</li>
 </ul>
 
-<h2>job control</h2>
+<h1>job control</h1>
 
 <ul>
 	<li>j / m: same as Enter</li>
@@ -88,12 +91,12 @@ grep search a file</p>
 	<li>z: suspend command, resume with fg in the foreground, or bg in the background</li>
 	<li>pstree: display running processes in a dependency tree</li>
 </ul>
-<h2>misc. and somewhat useless</h2>
+<h1>misc. and somewhat useless</h1>
 <ul>
 	<li>cal: display a calendar for the current month</li>	<li>yes [somestring]: prints a string until an interrupt (e.g. ctrl+c) is detected</li>
 	<li>rev: enters interactive mode and reverses any input string</li>
 </ul>
-<h2>corrupted terminal, what now?</h2>
+<h1>corrupted terminal, what now?</h1>
 <p>Once I typed in a badly-formatted path line in <code>./bash_profile</code> and after that I could not use any standard commands like vi or ls to fix it. I couldn't even switch to another terminal:
 <pre>
 $ vi ~/.bash_profile
@@ -111,7 +114,11 @@ $ defaults write com.apple.Finder AppleShowAllFiles true
 $ command not found
 </pre>
 <p>The solution was to change the default Terminal shell: Terminal > Preferences > Execute this command > /bin/tcsh. Restart Terminal, then fix the mess from tsch.</p>
-
-	</article>
+   </article>
+  <aside class="aside aside1">Aside 1</aside>
+  <aside class="aside aside2">Aside 2</aside>
+  <footer class="footer">Based on content I contributed to <a href="https://en.wikipedia.org/wiki/Canoe">Wikipedia's canoe article</a> and reproduced according to <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</footer>
+</div>
+	
 </body>
 </html>

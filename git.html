@@ -18,30 +18,30 @@
         <div class="colleft">
           <div class="col1">
             <!--begin main content section -->
-            <h2>commands and definitions</h2>
+            <h1>commands and definitions</h2>
 
             <dl>
             <dt>branch</dt><dd>see local branches</dd>
-              <dt><code>fetch</code></dt><dd>updates <code>.git/refs/remotes/origin/master</code>, a file containing information about the remote repo.</dd>
-              <dt><code>diff</code></dt><dd>after <code>fetch</code>, diffs local repo against remote.</dd>
+              <dt><kbd>fetch</kbd></dt><dd>updates <kbd>.git/refs/remotes/origin/master</kbd>, a file containing information about the remote repo.</dd>
+              <dt><kbd>diff</kbd></dt><dd>after <kbd>fetch</kbd>, diffs local repo against remote.</dd>
             </dl>
 
 
-            <h2>how to </h2>
+            <h1>how to </h2>
 
-            <h3>basic workflow</h3>
-            <ol><li>configure with <code>config</code></li>
-            <li><code>clone</code> a repository             <pre>
+            <h2>basic workflow</h3>
+            <ol><li>configure with <kbd>config</kbd></li>
+            <li><kbd>clone</kbd> a repository             <pre>
 git clone https://github.com/cornellier/johnsdocs.git
 cd johnsdocs</pre></li>
-            <li>Create and/or edit a file. See changes: <code>git diff foo.txt</code></li>
-            <li><code>git add foo.txt</code> (stage) the file to the index. Undo with <code>git reset HEAD foo.txt</code>. See changes between staged file and remote repo <code>git diff --cached foo.txt</code></li>
+            <li>Create and/or edit a file. See changes: <kbd>git diff foo.txt</kbd></li>
+            <li><kbd>git add foo.txt</kbd> (stage) the file to the index. Undo with <kbd>git reset HEAD foo.txt</kbd>. See changes between staged file and remote repo <kbd>git diff --cached foo.txt</kbd></li>
             <li>Do more changes. The file now has three states in three different places:<ul><li>HEAD</li><li>staged</li><li>the working directory</li></ul>
-            Abandon the changes in the working directory and reset it to the state of the stage: <code>git checkout foo.txt</code>.</li>
-            <li><code>git commit foo.txt</code>
-            <li>Push to HEAD: <code>git push</code></li></ol>
+            Abandon the changes in the working directory and reset it to the state of the stage: <kbd>git checkout foo.txt</kbd>.</li>
+            <li><kbd>git commit foo.txt</kbd>
+            <li>Push to HEAD: <kbd>git push</kbd></li></ol>
             
-            <h3>config</h3>
+            <h2>config</h3>
             <pre>
 git config --global user.name "John Cornellier"
 git config --global user.email john@johnsdocs.com
@@ -49,53 +49,42 @@ git config --global alias.a add
 git config --global alias.co commit
 git config --global alias.st status
             </pre>
-            <p>See settings with <code>git config --list</code>.</p>
-            <h3>create and add a file</h3>
+            <p>See settings with <kbd>git config --list</kbd>.</p>
+            <h2>create and add a file</h3>
 <pre>echo .DS_Store >> .gitignore
 git add .gitignore</pre>
-<h3>see staged (added) non-commited changes</h3>
+<h2>see staged (added) non-commited changes</h3>
 <pre>git diff --cached</pre>
-<h3>diff with origin</h3>
+<h2>diff with origin</h3>
 <pre>
 git fetch origin
 git diff origin -- [local-path]
 </pre>
-<h3>show files in local directory, not in HEAD</h3>
+<h2>show files in local directory, not in HEAD</h3>
 <pre>git ls-files --others --exclude-standard</pre>
-<h3>undo add before commit</h3>
+<h2>undo add before commit</h3>
 <pre>git reset foo.txt</pre>
-<h3>ammend the last commit message</h3>
+<h2>ammend the last commit message</h3>
 <pre>git commit --amend</pre>
-<h3>undo the last commit</h3>
+<h2>undo the last commit</h3>
             <pre>
 git commit -m "oops"
 git reset HEAD~
 </pre>
-<h3>remove local uncommited changes</h3>
-<p>tracked unstaged: modified but not added: <code>git checkout foo.txt</code></p>
-<p>tracked staged: have been added, aka moved to staging aka added to index: <code>git reset --hard</code></p>
-<p>untracked: new files, by definition unstaged, remove (no undo): <code>git clean -f</code>. To remove directories add <code>-d</code>.</p>
-<h3>discard all local changes and copy from repo</h3>
+<h2>remove local uncommited changes</h3>
+<p>tracked unstaged: modified but not added: <kbd>git checkout foo.txt</kbd></p>
+<p>tracked staged: have been added, aka moved to staging aka added to index: <kbd>git reset --hard</kbd></p>
+<p>untracked: new files, by definition unstaged, remove (no undo): <kbd>git clean -f</kbd>. To remove directories add <kbd>-d</kbd>.</p>
+<h2>discard all local changes and copy from repo</h3>
 <pre>
 git reset --hard HEAD
 git clean -f
 git pull</pre>
-            <!-- main content section end -->
-          </div>
-          <div class="col2">
-            <!-- Column 2 start -->
-           
-            <!-- Column 2 end -->
-          </div>
-          <div class="col3">
-            <!-- Column 3 start -->
-            <!-- Column 3 end -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <p></p>
-    </div>
+<h2>delete</h2> 
+<pre>git rm -r foo.txt
+git commit foo.txt -m "remove file"
+git push
+</ol>
+ 
   </body>
 </html>
