@@ -1,6 +1,21 @@
+#wrapper {
+  display: flex;
+}
+
+#sidebar {
+  flex: 0 0 auto;
+}
+
+#main {
+  flex: 1 1 auto;
+}
+
+
+
+
 /* colours inspired by Sublime Text 2 Monokai http://www.eclipsecolorthemes.org/?view=theme&id=6093 */
 
-.flex-container {
+/*.flex-container {
     display: -webkit-flex;
     display: flex;  
     -webkit-flex-flow: row wrap;
@@ -34,7 +49,7 @@
     .main    { order: 2; }
     .aside2 { order: 3; }
     .footer  { order: 4; }
-}
+}*/
 
 /*
 
@@ -93,7 +108,7 @@ pre {
   font-size: 130%;
 }
 p {
-  color:#F8F8F2;
+  color:#A6E22E;
 }
 img {
   margin:10px 0 5px;
