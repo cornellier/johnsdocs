@@ -16,12 +16,22 @@
 			<div class="colleft">
 				<div class="col1">
 					<!--begin main content section -->
+<h2>boot commands</h2>
+<dl><dt>command+r</dt><dd>boot to recovery mode</dd>
+<dt>option</dt><dd>access startup manager</dd>
+<dt>c</dt><dd>boot from CD, DVD, or USB</dd>
+<dt>n</dt><dd>netboot</dd>
+<dt>shift</dt><dd>safe boot</dd>
+<dt>command+option+p+r</dt><dd>reset PRAM</dd>
+<dt>command+s</dt><dd>single user mode</dd>
+<dt>t</dt><dd>target disk mode</dd>
+</dl>
 <h2>kill a user session</h2>
 <p>Even if you don't know another user's password you can close a session they left open on your machine:</p>
 <ol>
 	<li>Open Activity Monitor</li>
 	<li>In the CPU tab, Process Name column select a loginwindow process with the user you want to kick.</li>
-	<li>alt+command+q</li>
+	<li>option+command+q</li>
 </ol>
 <h2>local web server</h2>
 <ol><li>Start the local Apache web server: <code>sudo apachectl start</code></li>
